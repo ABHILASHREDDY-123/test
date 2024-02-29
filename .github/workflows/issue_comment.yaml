@@ -8,9 +8,10 @@ jobs:
    comment-with-action:
       runs-on: ubuntu-latest
       steps:
-        - run: echo '${{ toJSON(github.action)}}' | jq
+        - name: "hello ...!!"
+          run: echo '${{ toJSON(github.action)}}' | jq
           shell: bash
-          
+
         - name: "dump github context"
           run: echo '${{ toJSON(github)}}' | jq
           shell: bash
