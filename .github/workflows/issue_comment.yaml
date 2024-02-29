@@ -9,10 +9,12 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: "hello ...!!"
+          id: 's1'
           run: echo '${{ toJSON(github.action)}}' | jq
           shell: bash
 
         - name: "dump github context"
+          id: "s2"
           run: echo '${{ toJSON(github.action)}}' | jq
           shell: bash
       
