@@ -13,6 +13,6 @@ jobs:
           shell: bash
 
         - name: "dump github context"
-          run: echo '${{ toJSON(github)}}' | jq
+          run: echo '${{ toJSON(github.action)}}' | jq
           shell: bash
       
